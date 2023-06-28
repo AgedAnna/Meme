@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" type="image/svg" href="https://images.vexels.com/media/users/3/318413/isolated/preview/17ff412266bfeec2285f267cc98920e4-capivara-usando-um-belo-chapa-u.png"/>
+    <link rel="stylesheet" href="para.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns, Te Amo</title>
+</head>
+<body>
+    <div id="confetti-container"></div>
+    <div class="confetti-container">
+        <div class="center-content">
+            <h1>Parabéns, te amo!</h1>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <script>
+        function createConfetti() {
+            const container = document.getElementById("confetti-container");
+            const numConfetti = 50; // Número de confetes desejado
+
+            for (let i = 0; i < numConfetti; i++) {
+                const confetti = document.createElement("div");
+                confetti.className = "confetti";
+                confetti.style.left = Math.random() * window.innerWidth + "px";
+                confetti.style.animationDelay = Math.random() * 4 + "s";
+                container.appendChild(confetti);
+            }
+        }
+
+        createConfetti();
+    </script>
+</body>
+</html>

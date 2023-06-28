@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #f00; /* Cor dos confetes */
+  border-radius: 50%;
+  animation: confettiAnimation 4s linear infinite;
+}
+
+@keyframes confettiAnimation {
+  0% {
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+  }
+}
